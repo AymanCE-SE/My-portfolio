@@ -1,0 +1,74 @@
+:root {
+  --primary-color: #1a73e8;
+  --secondary-color: #fbbc05;
+  --background-color: #2b2a2a;
+  --text-color: #ffffff;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color)
+}
+/*################################  NAVBAR  ####################################*/ 
+.navbar {
+  border: solid 1px var(--primary-color);
+  border-radius: 2rem;
+  box-shadow: 0 2px 12px rgba(26, 115, 232, 0.08);
+  /* background: var(--background-color) !importan; */
+  padding: 0.8rem 2rem;
+}
+
+.navLinks{
+  position: relative;
+    letter-spacing: 0.9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    transition: color 0.3s;
+    padding: 1rem;
+    margin: 1.1rem ;
+}
+.navLinks::after {
+  content: '';
+  position: absolute; 
+  left: 14%;
+  bottom: 0.3rem;
+  width: 0;
+  height: 3px;
+  background-color: var(--secondary-color);
+  transition: width 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+.navLinks:hover::after{
+    width: 70%;
+}
+
+.custom-navbar-collapse {
+  background: var(--background-color);  
+  border-radius: 2rem; 
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);  
+  padding: 0.4rem;
+}
+
+@media (max-width:768px ) {
+  .navbar {
+    /* background-color:  var(--background-color) !important; */
+    border-radius: 2rem !important;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    padding: 1rem;
+  }
+  .navLinks:hover::after{
+    width: 80%;
+    left: 0%;
+  }
+}
+
+.custom-navbar-collapse {
+  margin-top: 1rem;
+  border-radius: 2rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  background: var(--background-color);
+}
