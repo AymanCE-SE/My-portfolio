@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 :root {
   --primary-color: #1a73e8;
   --secondary-color: #fbbc05;
-  --background-color: #2b2a2a;
+  --background-color: #282727;
   --text-color: #ffffff;
 }
 
@@ -71,4 +72,83 @@ body {
   border-radius: 2rem;
   box-shadow: 0 4px 16px rgba(0,0,0,0.15);
   background: var(--background-color);
+}
+
+/*######################################################## Hero ##############################################################*/
+
+.hero-wraper{
+  position: relative;
+  overflow: hidden;
+  background: url(../assets/background.jpg) no-repeat;
+  background-size:cover;
+  background-position: center;
+  height: 90vh;
+  box-shadow: 0 4px 24px rgba(26, 115, 232, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.main-info{
+  font-family: "Roboto Condesed", sans-serif;
+  margin-bottom: 1.1rem;
+/* position: absolute;
+  margin:  auto;
+  text-align: center;
+  top: 50%;
+  left: 50%; */
+}
+
+.main-info h1{
+  color: var(--secondary-color);
+  font-size: 3rem;
+  font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(26, 115, 232, 0.25), 0 0 4px #000;
+  margin-bottom: 1rem;
+  /* background: linear-gradient(90deg, #fbbc05 40%, #1a73e8 100%); */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: var(--secondary-color);
+}
+/* button design */
+.anchor {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  font-family: sans-serif;
+  font-weight: 600;
+  border-radius: 50px;
+  border: 2px solid #ed553b;
+  padding: 14px 40px 13px;
+  overflow: hidden;
+  position: relative;
+}
+
+.anchor:hover {
+  color: #4e484a;
+}
+
+.button a::before {
+  position: absolute;
+  content: "";
+  z-index: 0;
+  background-color: #ed553b;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  height: 111%;
+  transition: all .3s ease;
+}
+
+.button a:hover::before {
+  height: 11%;
+}
+
+.button span {
+  position: relative;
+  z-index: 2;
+  transition: all .3s ease;
 }
