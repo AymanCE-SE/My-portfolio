@@ -5,16 +5,16 @@ import { HiBarsArrowDown } from "react-icons/hi2";
 
 export default function Header() {
   return (
-    <Navbar className='container navbar' bg="dark" data-bs-theme="dark" expand="md" sticky="top">
-      <Container >
-        <Navbar.Brand href="#home">My Portfolio</Navbar.Brand>
-        <Navbar.Toggle className='border-3  rounded-pill' aria-controls="main-navbar-nav" >
-          <span className='text-warning fs-3  '>
+    <Navbar className='navbar' bg="dark" data-bs-theme="dark" expand="md" sticky="top">
+      <Container className='w-75 d-flex justify-content-between'>
+        <Navbar.Brand href="#home" className='me-5 ms-0'>My Portfolio</Navbar.Brand>
+        <Navbar.Toggle className='border-3 rounded-pill' aria-controls="main-navbar-nav">
+          <span className='text-warning fs-3'>
             <HiBarsArrowDown />
           </span>
-          </ Navbar.Toggle >
-        <Navbar.Collapse id="main-navbar-nav " className='custom-navbar-collapse '>
-          <Nav className="ms-auto mx-4">
+        </Navbar.Toggle>
+        <Navbar.Collapse id="main-navbar-nav" className='custom-navbar-collapse'>
+          <Nav className="m-auto">
             <Nav.Link className='navLinks' href="#home">Home</Nav.Link>
             <Nav.Link className='navLinks' href="#about">About</Nav.Link>
             <Nav.Link className='navLinks' href="#portfolio">Portfolio</Nav.Link>
