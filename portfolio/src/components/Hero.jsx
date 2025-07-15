@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ReactTyped } from "react-typed";
-import profile from  "../assets/profile.png"
+// import profile from  "../assets/profile.png"
 import { Row } from 'react-bootstrap';
 
 export default function Hero() {

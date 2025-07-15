@@ -1,11 +1,13 @@
 import React from "react";
+import profile from  "../assets/profile.jpg"
 
 export default function About() {
   return (
     <>
     <section id="about" className="about-section p-5">
-      <div className="about-content">
+      <div className="about-content d-flex flex-column align-items-center">
         <h2 className="about-title">About Me</h2>
+        <img src={profile} alt="Ayman Samir" className="about-img " />
         <p className="about-summary">
           Hi, I'm <span className="highlight">Ayman Samir</span>, a passionate Full Stack Web Developer.
           I love building modern, performant web apps and learning new technologies.
@@ -25,11 +27,11 @@ export default function About() {
             <li>PostgreSQL</li>
           </ul>
         </div>
-        <div className="about-education">
+        <div className="about-education  align-self-start">
           <h3 className="education-title">Education</h3>
           <p>Zagazig Higher Institute Of Engineering and Technology (2013-2018)</p>
         </div>
-        <div className="about-experience">
+        <div className="about-experience align-self-start">
           <h3 className="experience-title">Experience</h3>
           <p>Information Technology Institute ITI Internship (2024-2025)</p>
           <p>Freelance Projects (2025 - Present)</p>
