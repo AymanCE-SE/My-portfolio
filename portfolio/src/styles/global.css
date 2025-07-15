@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+html {
+  scroll-behavior: smooth;
+}
 :root {
   --primary-color: #1a73e8;
   --secondary-color: #fbbc05;
@@ -80,12 +83,13 @@ body {
 /*######################################################## Hero ##############################################################*/
 
 .hero-wraper{
+  scroll-margin-top: 85px;
   position: relative;
   overflow: hidden;
   background: url(../assets/background.jpg) no-repeat;
   background-size:cover;
   background-position: center;
-  height: 90vh;
+  height: 95vh;
   box-shadow:var(--box-shadow);
   display: flex;
   flex-direction: column;
@@ -93,17 +97,21 @@ body {
   align-items: center;
   text-align: center;
 }
+
+.hero-img {
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+  margin-bottom: -5.9rem;
+}
+
 .main-info{
   font-family: "Roboto Condesed", sans-serif;
   margin-bottom: 1.1rem;
-/* position: absolute;
-  margin:  auto;
-  text-align: center;
-  top: 50%;
-  left: 50%; */
 }
 
 .main-info h1{
+  position: relative;
   color: var(--text-color); 
   font-size: 3rem;
   font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
@@ -120,6 +128,24 @@ body {
   background: rgba(40, 39, 39, 0.54); /* Slight dark overlay for contrast */
   /* display: inline-block; */
 }
+
+.main-info .highlight {
+  color: var(--secondary-color) !important;
+}
+
+.subtitle {
+  color: var(--primary-color);
+}
+
+.description {
+  color: var(--text-color);
+  opacity: 0.85;
+}
+
+.fs-2 {
+  color: var(--accent-color);
+}
+
 /* button design */
 .anchor {
   text-decoration: none;
@@ -132,9 +158,20 @@ body {
   padding: 14px 40px 13px;
   overflow: hidden;
   position: relative;
+  /* background: var(--primary-color); */
 }
+.anchor.contact{
+   background: var(--primary-color) !important;
+}
+.anchor.contact:hover{
+background: var(--accent-color);
+color:var(--text-color);
+border-color: var(--primary-color);
 
+
+}
 .anchor:hover {
+  /* background: var(--accent-color); */
   color: var(--accent-color);
 }
 
@@ -158,4 +195,284 @@ body {
   position: relative;
   z-index: 2;
   transition: all .3s ease;
+}
+
+/*########################### ABOUT ####################################*/
+.about-section {
+  background: var(--background-color);
+  scroll-margin-top: 140px;
+  color: var(--text-color);
+  padding: 4rem 0 3rem 0;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--navbar-radius);
+  margin: 2rem auto;
+  width: 80%;
+  max-width: 900px;
+  position: relative;
+  animation: fadeInUp 1s cubic-bezier(0.4,0,0.2,1);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.about-title {
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.about-summary {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.highlight {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.skills-title, .education-title, .experience-title {
+  color: var(--accent-color);
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.skills-list li {
+  background: var(--nav-hover-bg);
+  color: var(--secondary-color);
+  padding: 0.7rem 1.3rem;
+  border-radius: var(--button-radius);
+  font-weight: 600;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.2s;
+}
+.skills-list li:hover {
+  transform: scale(1.08);
+  background: var(--accent-color);
+  color: var(--text-color);
+}
+
+/*##################### Portfolio and project card ################*/
+/* Portfolio Section */
+.portfolio-section {
+  background: var(--background-color);
+  color: var(--text-color);
+  padding: 4rem 0 3rem 0;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--navbar-radius);
+  margin: 2rem auto;
+  width: 80%;
+  max-width: 1100px;
+  position: relative;
+  animation: fadeInUp 1s cubic-bezier(0.4,0,0.2,1);
+}
+
+.portfolio-title {
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Project Card */
+.project-card {
+  width: 320px;
+  min-height: 220px;
+  border-radius: var(--button-radius);
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s;
+  cursor: pointer;
+  background: var(--background-color);
+  border: 2px solid var(--primary-color);
+  overflow: hidden;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0; top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  border-radius: var(--button-radius);
+}
+
+.card-front {
+  background: var(--gradient);
+  color: var(--text-color);
+  font-size: 1.4rem;
+  font-weight: 700;
+  opacity: 1;
+  z-index: 1;
+}
+
+.project-card:hover .card-front {
+  opacity: 0;
+}
+
+.card-back {
+  background: rgba(40,39,39,0.98);
+  color: var(--text-color);
+  opacity: 0;
+  z-index: 2;
+  flex-direction: column;
+  text-align: center;
+}
+
+.project-card:hover .card-back {
+  opacity: 1;
+}
+
+.project-title {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: var(--text-shadow);
+}
+
+.project-desc {
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  color: var(--text-color);
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.card-link {
+  font-weight: 600;
+  margin: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.card-link:hover {
+  background: var(--accent-color);
+  color: var(--text-color);
+}
+
+/* Animation for card front/back */
+.fade-enter {
+  opacity: 0;
+  transform: scale(0.95);
+}
+.fade-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+.fade-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+.fade-exit-active {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/*############################## contactForm ####################*/
+.contact-section {
+  background: var(--background-color);
+  color: var(--text-color);
+  padding: 4rem 0 3rem 0;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--navbar-radius);
+  margin: 2rem auto;
+  width: 80%;
+  max-width: 700px;
+  position: relative;
+  animation: fadeInUp 1s cubic-bezier(0.4,0,0.2,1);
+}
+
+.contact-title {
+  color: var(--secondary-color);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contact-form {
+  background: rgba(40,39,39,0.98);
+  color: var(--text-color);
+  border-radius: var(--navbar-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.contact-form label {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.contact-btn {
+  background: var(--primary-color);
+  color: var(--text-color);
+  border-radius: var(--button-radius);
+  border: none;
+  font-weight: 600;
+  padding: 0.7rem 2rem;
+  transition: background 0.3s;
+}
+
+.contact-btn:hover {
+  background: var(--accent-color);
+  color: var(--text-color);
+}
+
+/*############################## FOOTER ####################*/
+.footer-section {
+  background: var(--background-color);
+  color: var(--text-color);
+  border-top: 2px solid var(--primary-color);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+
+.footer-icon {
+  color: var(--primary-color);
+  font-size: 2rem;
+  transition: color 0.3s;
+}
+
+.footer-icon:hover {
+  color: var(--accent-color);
 }
