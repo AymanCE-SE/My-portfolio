@@ -110,24 +110,6 @@ body {
   margin-bottom: 1.1rem;
 }
 
-.main-info h1{
-  position: relative;
-  color: var(--text-color); 
-  font-size: 3rem;
-  font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-shadow: var(--text-shadow);
-  margin-bottom: 1rem;
-  /* background: linear-gradient(90deg, #fbbc05 40%, #1a73e8 100%); */
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: var(--secondary-color);
-  padding: 1rem 2rem;
-  border-radius: 2rem;
-  background: rgba(40, 39, 39, 0.54); /* Slight dark overlay for contrast */
-  /* display: inline-block; */
-}
 
 .main-info .highlight {
   color: var(--secondary-color) !important;
@@ -137,9 +119,17 @@ body {
   color: var(--primary-color);
 }
 
+.hero-title {
+  font-size: 2.5rem;
+}
+
+.hero-typed {
+  font-size: 2rem;
+}
+
 .description {
   color: var(--text-color);
-  opacity: 0.85;
+  opacity: 0.80;
 }
 
 .fs-2 {
@@ -179,7 +169,7 @@ border-color: var(--primary-color);
   position: absolute;
   content: "";
   z-index: 0;
-  background-color: #ed553b;
+  background-color: var(--accent-color);
   left: -5px;
   right: -5px;
   bottom: -5px;
@@ -196,6 +186,34 @@ border-color: var(--primary-color);
   z-index: 2;
   transition: all .3s ease;
 }
+/************* Responsive hero content ********************************/
+
+    @media (max-width: 768px) {
+    .hero-img{
+      width: 10rem;
+      height: 16rem;
+    }
+    .hero-title {
+      font-size: 1.7rem;
+    }
+    .hero-typed {
+      font-size: 1.1rem !important;
+    }
+    .subtitle {
+      font-size: 1.1rem;
+    }
+    .description {
+      font-size: 0.8rem;
+    }
+    .anchor span{
+      /* background-color: #282727; */
+      font-size: 0.7rem;
+    }
+    .button .anchor{
+      width: 10rem;
+      padding: 0.8rem;
+    }
+  }
 
 /*########################### ABOUT ####################################*/
 .about-section {
