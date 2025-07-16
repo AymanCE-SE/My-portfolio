@@ -6,7 +6,7 @@ import Col from "react-bootstrap/Col";
 import { FaGithub, FaExternalLinkAlt, FaVideo } from "react-icons/fa";
 import { CSSTransition } from "react-transition-group";
 
-export default function ProjectCard({ title, description, demo, github, video }) {
+export default function ProjectCard({ title, description, demo, github, video, image }) {
   const [hovered, setHovered] = useState(false);
   const frontRef = useRef(null);
   const backRef = useRef(null);
@@ -28,7 +28,10 @@ export default function ProjectCard({ title, description, demo, github, video })
           unmountOnExit
           nodeRef={frontRef}
         >
-          <div ref={frontRef} className="card-front w-100 text-center">
+          <div ref={frontRef} className="card-front w-100 text-center d-flex flex-column align-items-center">
+            {image && (
+              <img src={image} alt={title} className="project-img mb-3" />
+            )}
             <Card.Title className="project-title">{title}</Card.Title>
           </div>
         </CSSTransition>

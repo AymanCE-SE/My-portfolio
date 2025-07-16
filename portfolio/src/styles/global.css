@@ -385,7 +385,7 @@ border-color: var(--primary-color);
 }
 
 .card-front {
-  background: var(--gradient);
+  /* background: var(--gradient); */
   color: var(--text-color);
   font-size: 1.4rem;
   font-weight: 700;
@@ -415,6 +415,16 @@ border-color: var(--primary-color);
   font-size: 1.5rem;
   font-weight: 700;
   text-shadow: var(--text-shadow);
+}
+
+.project-img {
+  width: 100%;
+  max-width: 220px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 1rem;
 }
 
 .project-desc {
