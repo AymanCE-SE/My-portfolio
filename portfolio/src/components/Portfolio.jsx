@@ -11,7 +11,7 @@ const projects = [
   {
     title: "FAMMS E-Commerce (React & Redux Toolkit)",
     description: "E-commerce platform built with React and Redux Toolkit featuring product filtering, cart logic, and admin panel for managing inventory via a mock API.",
-    demo: "https://react-bootstrap-with-redux-f6ma7j0i3.vercel.app",
+    demo: "https://react-bootstrap-with-redux.vercel.app/",
     github: "https://github.com/AymanCE-SE/React-bootstrap-with-redux",
     video: "https://youtu.be/N57RbkGyqu8?si=4Keq5duI9564EgHk",
     image: fammsImg
