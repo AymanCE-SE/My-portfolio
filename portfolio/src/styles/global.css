@@ -2,6 +2,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 :root {
   --primary-color: #1a73e8;
   --secondary-color: #fbbc05;
@@ -25,6 +26,7 @@ body {
   padding: 0;
   color: var(--text-color)
 }
+
 /*################################  NAVBAR  ####################################*/ 
 .logo {
   width: 6rem;
@@ -118,22 +120,7 @@ body {
   text-align: center;
 }
 
-.about-img {
-  width: 16rem;
-  height: 16rem;
-  object-fit: cover;
-  border: 4px solid var(--primary-color);
-  border-radius: 2rem;         
-  box-shadow: var(--box-shadow); 
-  background: var(--background-color);
-  margin-bottom: 2rem;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
 
-.about-img:hover {
-  transform: scale(1.04);
-  box-shadow: 0 8px 32px rgba(26, 115, 232, 0.25);
-}
 
 .main-info{
   font-family: "Roboto Condesed", sans-serif;
@@ -266,6 +253,23 @@ border-color: var(--primary-color);
   to { opacity: 1; transform: translateY(0);}
 }
 
+.about-img {
+  width: 16rem;
+  height: 16rem;
+  object-fit: cover;
+  border: 4px solid var(--primary-color);
+  border-radius: 2rem;         
+  box-shadow: var(--box-shadow); 
+  background: var(--background-color);
+  margin-bottom: 2rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 8px 32px rgba(26, 115, 232, 0.25);
+}
+
 .about-title {
   color: var(--secondary-color);
   font-size: 2.5rem;
@@ -320,6 +324,7 @@ border-color: var(--primary-color);
 /*##################### Portfolio and project card ################*/
 /* Portfolio Section */
 .portfolio-section {
+  scroll-margin-top: 140px;
   background: var(--background-color);
   color: var(--text-color);
   padding: 4rem 0 3rem 0;
@@ -460,6 +465,7 @@ border-color: var(--primary-color);
 
 /*############################## contactForm ####################*/
 .contact-section {
+  scroll-margin-top: 140px;
   background: var(--background-color);
   color: var(--text-color);
   padding: 4rem 0 3rem 0;
