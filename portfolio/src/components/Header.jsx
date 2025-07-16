@@ -13,7 +13,7 @@ export default function Header() {
             <HiBarsArrowDown />
           </span>
         </Navbar.Toggle>
-        <Navbar.Collapse id="main-navbar-nav" className='custom-navbar-collapse mt-5'>
+        <Navbar.Collapse id="main-navbar-nav" className='custom-navbar-collapse mt-2'>
           <Nav className="m-auto">
             <Nav.Link className='navLinks' href="#home">Home</Nav.Link>
             <Nav.Link className='navLinks' href="#about">About</Nav.Link>
