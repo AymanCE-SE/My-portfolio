@@ -2,12 +2,13 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { HiBarsArrowDown } from "react-icons/hi2";
-
+import logo from "../assets/logo.png"
 export default function Header() {
   return (
     <Navbar className='navbar' bg="dark" data-bs-theme="dark" expand="md" sticky="top">
       <Container className='w-75 d-flex justify-content-between'>
-        <Navbar.Brand href="#home" className='me-5 ms-0 '>My Portfolio</Navbar.Brand>
+        {/* <Navbar.Brand href="#home" className='me-5 ms-0 '>My Portfolio</Navbar.Brand> */}
+        <Navbar.Brand href="#home" className='me-5 ms-0 '><img src={logo} className='logo'></img></Navbar.Brand>
         <Navbar.Toggle className='border-3 rounded-pill' aria-controls="main-navbar-nav">
           <span className='text-warning fs-3 '>
             <HiBarsArrowDown />
