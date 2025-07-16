@@ -39,9 +39,9 @@ export default function ProjectCard({ title, description, demo, github, video })
           unmountOnExit
           nodeRef={backRef}
         >
-          <div ref={backRef} className="card-back w-100 text-center">
-            <Card.Text className="project-desc mb-3">{description}</Card.Text>
-            <Row className="justify-content-center">
+          <div ref={backRef} className="card-back w-100 text-center d-flex flex-column h-100">
+            <Card.Text className="project-desc mb-3 flex-grow-1">{description}</Card.Text>
+            <Row className="justify-content-center mt-auto">
               {demo && (
                 <Col xs="auto">
                   <Button
@@ -50,7 +50,7 @@ export default function ProjectCard({ title, description, demo, github, video })
                     target="_blank"
                     className="card-link"
                   >
-                    <FaExternalLinkAlt /> Live Demo
+                    <FaExternalLinkAlt />
                   </Button>
                 </Col>
               )}
@@ -62,7 +62,7 @@ export default function ProjectCard({ title, description, demo, github, video })
                     target="_blank"
                     className="card-link"
                   >
-                    <FaGithub /> GitHub
+                    <FaGithub />
                   </Button>
                 </Col>
               )}
@@ -74,7 +74,7 @@ export default function ProjectCard({ title, description, demo, github, video })
                     target="_blank"
                     className="card-link"
                   >
-                    <FaVideo /> Demo Video
+                    <FaVideo />
                   </Button>
                 </Col>
               )}
