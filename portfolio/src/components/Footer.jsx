@@ -14,7 +14,7 @@ export default function Footer() {
         <a href="https://x.com/Ayman_Samir22" target="_blank" rel="noopener noreferrer" className="footer-icon mx-3">
         <FaXTwitter />
         </a>
-        <a href="ayman.samir1095@gmail.com" className="footer-icon mx-3">
+        <a href="mailto:ayman.samir1095@gmail.com" className="footer-icon mx-3">
           <FaEnvelope />
         </a>
         <div className="mt-3" style={{ color: 'var(--text-color)' }}>

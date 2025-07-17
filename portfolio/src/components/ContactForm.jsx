@@ -1,16 +1,35 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Form, Button, Alert, Container, Row, Col } from "react-bootstrap";
+import emailjs from '@emailjs/browser';
 
 export default function ContactForm() {
   const [showSuccess, setShowSuccess] = useState(false);
+  const [showError, setShowError] = useState(false);
+
+  const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setShowSuccess(true);
+    setShowSuccess(false);
+    setShowError(false);
 
-    
-    e.target.reset();
-    setTimeout(() => setShowSuccess(false), 3000);
+      emailjs
+      .sendForm('service_hogokgi', 'template_dfccqba', form.current, {
+        publicKey: 'xcBrb6PKfgy1FDOgX',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+              e.target.reset();
+              setShowSuccess(true);
+              setTimeout(() => setShowSuccess(false), 3000);
+        },
+        (error) => {
+          setShowError(true);
+          setTimeout(()=> setShowError(false),4000)
+          console.log('FAILED...', error.text);
+        },
+      );
   };
 
   return (
@@ -18,7 +37,7 @@ export default function ContactForm() {
     <section id="contact" className="contact-section">
       <Container>
         <h2 className="contact-title mb-4">Contact Me</h2>
-        <Form onSubmit={handleSubmit} className="contact-form p-4 rounded shadow">
+        <Form ref={form} onSubmit={handleSubmit} className="contact-form p-4 rounded shadow">
           <Row>
             <Col md={6}>
               <Form.Group className="mb-3" controlId="formName">
@@ -35,7 +54,7 @@ export default function ContactForm() {
           </Row>
           <Form.Group className="mb-3" controlId="formSubject">
             <Form.Label>Subject</Form.Label>
-            <Form.Control type="text" name="subject" required placeholder="Subject" />
+            <Form.Control type="text" name="title" required placeholder="Subject" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formMessage">
             <Form.Label>Message</Form.Label>
@@ -47,6 +66,11 @@ export default function ContactForm() {
           {showSuccess && (
             <Alert variant="success" className="mt-3">
               Your message has been sent successfully...Thank you!
+            </Alert>
+          )}
+          {showError && (
+            <Alert variant="danger" className="mt-3">
+              Sorry, something went wrong. Please try again later.
             </Alert>
           )}
         </Form>
