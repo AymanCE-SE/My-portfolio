@@ -48,6 +48,7 @@ const projects = [
     title: "Tanfeez Freelancing Platform",
     description: "Full‑stack freelance marketplace with user roles, proposals, dashboards & JWT auth Django REST, PostgreSQL, React, Redux Toolkit ",
     github: "https://github.com/AymanCE-SE/Tanfeez-freelancePlatform",
+    demo: "https://tanfeez-freelance-platform.vercel.app/",
     image: tanfeezImg
   },
 ];
