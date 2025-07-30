@@ -4,7 +4,7 @@ import fammsImg from '../assets/famms.PNG'
 import foodtroveImg from '../assets/foodtrove.png'
 import crowdfundingImg from '../assets/crowdfunding.PNG'
 import portfolioImg from '../assets/my-portfolio.png'
-import pervasionImg from '../assets/pervasion.png'
+import jumoohImg from '../assets/jumooh.png'
 import tanfeezImg from '../assets/tanfeez.png'
 
 const projects = [
@@ -38,10 +38,11 @@ const projects = [
     image: portfolioImg
   },
   {
-    title: "Pervasion Platform",
-    description: "Pervasion – A full‑stack portfolio platform with React & Django REST, JWT auth, file uploads, i18n, and deploy‑ready build setup supports two languages and light,dark mode",
+    title: "Jumooh Platform",
+    description: "Jumooh – A full‑stack portfolio platform with React & Django REST, JWT auth, file uploads, i18n, and deploy‑ready build setup supports two languages and light,dark mode",
     github: "https://github.com/AymanCE-SE/pervasion",
-    image: pervasionImg
+    demo: "https://pervasion.vercel.app/",
+    image: jumoohImg
   },
   {
     title: "Tanfeez Freelancing Platform",
