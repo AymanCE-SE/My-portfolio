@@ -39,9 +39,9 @@ const projects = [
   },
   {
     title: "Jumooh Platform",
-    description: "Jumooh – A full‑stack portfolio platform with React & Django REST, JWT auth, file uploads, i18n, and deploy‑ready build setup supports two languages and light,dark mode",
+    description: "Jumooh – A full‑stack platform using React & Django REST, PostgreSQL, JWT auth, file uploads, i18n, and deploy‑ready build setup supports two languages and light,dark mode deployed on hostinger server.",
     github: "https://github.com/AymanCE-SE/pervasion",
-    demo: "https://pervasion.vercel.app/",
+    demo: "https://jumoohmedia.com/",
     image: jumoohImg
   },
   {
