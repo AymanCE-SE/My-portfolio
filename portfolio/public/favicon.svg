@@ -1,0 +1,8 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>AS — Ayman Portfolio</title>
+  <path d="M50 5 L95 27.5 L95 72.5 L50 95 L5 72.5 L5 27.5 Z" fill="#0b3d91"/>
+  <text x="50" y="66" font-family="sans-serif" font-weight="900" font-size="48"
+        text-anchor="middle" fill="#e6eef8" stroke="#0b3d91" stroke-width="2" paint-order="stroke">
+    AS
+  </text>
+</svg>
