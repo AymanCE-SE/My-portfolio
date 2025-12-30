@@ -65,13 +65,13 @@
 
 .hero-typed {
   font-size: clamp(1.5rem, 5vw, 3rem) !important;
-  background: var(--gradient-accent);
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: var(--gradient-primary); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-weight: 700;
-  text-shadow: 0 0 30px rgba(255, 107, 107, 0.3);
-  letter-spacing: 1px;
+  filter: drop-shadow(0 0 10px rgba(44, 177, 255, 0.3));
 }
 
 html[data-theme="light"] .hero-typed {

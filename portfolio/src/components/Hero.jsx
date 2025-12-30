@@ -29,7 +29,7 @@ export default function Hero() {
           
           <div className="typed-container">
             <ReactTyped
-              className='fs-2 hero-typed'
+              className='fs-2 hero-typed '
               strings={[
                 "Web Design",
                 "Web Development",
