@@ -170,9 +170,9 @@ html[data-theme="light"] .contact-form {
 }
 
 .form-input {
-  background: rgba(255, 255, 255, 0.05) !important;
+  /* background: rgba(255, 255, 255, 0.05) ; */
   border: 1px solid rgba(0, 212, 255, 0.2) !important;
-  color: var(--text-color) !important;
+  color: #0f172a !important;
   padding: 0.75rem 1.25rem !important;
   border-radius: var(--radius-lg) !important;
   transition: var(--transition-base) !important;
@@ -185,10 +185,10 @@ html[data-theme="light"] .form-input {
 }
 
 .form-input:focus {
-  background: rgba(255, 255, 255, 0.08) !important;
+  /* background: rgba(255, 255, 255, 0.08) !important; */
   border-color: var(--secondary-color) !important;
   box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1) !important;
-  color: var(--text-color) !important;
+  color: #0f172a !important; ;
 }
 
 html[data-theme="light"] .form-input:focus {
@@ -203,8 +203,8 @@ html[data-theme="light"] .form-input:focus {
 .contact-form .form-input::-moz-placeholder,
 .contact-form .form-input:-ms-input-placeholder,
 .contact-form .form-input::-ms-input-placeholder {
-  color: rgba(255,255,255,0.92) !important;
-  opacity: 1 !important;
+  color: rgba(255,255,255,0.92) ;
+  opacity: 1 ;
 }
 
 html[data-theme="light"] .contact-form .form-input::placeholder,
@@ -212,8 +212,8 @@ html[data-theme="light"] .contact-form .form-input::-webkit-input-placeholder,
 html[data-theme="light"] .contact-form .form-input::-moz-placeholder,
 html[data-theme="light"] .contact-form .form-input:-ms-input-placeholder,
 html[data-theme="light"] .contact-form .form-input::-ms-input-placeholder {
-  color: rgba(0,0,0,0.45) !important;
-  opacity: 1 !important;
+  color: rgba(0,0,0,0.45) ;
+  opacity: 1 ;
 }
 
 .contact-btn-submit {
