@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Form, Button, Alert, Container, Row, Col } from "react-bootstrap";
 import emailjs from '@emailjs/browser';
-import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin, FaGithub, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 import '../styles/ContactForm.css';
 
 export default function ContactForm() {
@@ -60,19 +60,19 @@ export default function ContactForm() {
                 </div>
                 <div className="info-content">
                   <h4>Email</h4>
-                  <a href="mailto:contact@ayman.samir1095@gmail.com">ayman.samir1095@gmail.com</a>
+                  <a href="mailto:contact@ayman.samir1095@gmail.com">send email</a>
                 </div>
               </div>
 
-              <div className="info-item">
-                <div className="info-icon">
-                  <FaPhone />
-                </div>
-                <div className="info-content">
-                  <h4>Phone</h4>
-                  <a href="tel:+201159090880">+201159090880</a>
-                </div>
-              </div>
+                  <div className="info-item">
+                  <div className="info-icon">
+                    <FaWhatsapp />
+                  </div>
+                  <div className="info-content">
+                    <h4>WhatsApp</h4>
+                    <a href="https://wa.me/201159090880" target="_blank" rel="noopener noreferrer">send WhatsApp message</a>
+                  </div>
+                  </div>
 
               <div className="social-links">
                 <h4>Follow Me</h4>
