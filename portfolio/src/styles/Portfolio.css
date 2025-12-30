@@ -1,0 +1,62 @@
+/* Portfolio component styles */
+.portfolio-section {
+  scroll-margin-top: 140px;
+  background: var(--surface-color);
+  color: var(--text-color);
+  padding: 5rem 2rem;
+  margin: 3rem auto;
+  max-width: 1200px;
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-lg);
+  animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-base);
+}
+
+.portfolio-section::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 107, 107, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 2.5rem;
+  justify-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive rules moved from global.css */
+@media (max-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -17,7 +17,7 @@ Showcases my skills, projects, education, and experience as a Full Stack Web Dev
 - Portfolio section with interactive project cards (image, demo, video, GitHub links)
 - Contact form with EmailJS integration and success/error feedback
 - Footer with social media and GitHub links
-- Custom color palette and gradients using CSS variables
+- Custom masculine color palette (deep navy, steel gray, muted teal) and gradients using CSS variables
 - Built with React, Vite, Bootstrap, React Bootstrap, and React Icons
 
 ## 🛠️ Tech Stack

@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import { FaXTwitter } from "react-icons/fa6";
+import '../styles/Footer.css';
 export default function Footer() {
   return (
     <>    
@@ -17,7 +18,7 @@ export default function Footer() {
         <a href="mailto:ayman.samir1095@gmail.com" className="footer-icon mx-3">
           <FaEnvelope />
         </a>
-        <div className="mt-3" style={{ color: 'var(--text-color)' }}>
+        <div className="footer-copyright">
           &copy; {new Date().getFullYear()} Ayman Samir. All rights reserved.
         </div>
       </div>

@@ -1,0 +1,185 @@
+/* ProjectCard component styles */
+.project-card-wrapper {
+  width: 100%;
+  max-width: 380px;
+}
+
+.project-card {
+  position: relative;
+  min-height: 450px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  /* Force correct card background to override Bootstrap defaults */
+  background-color: var(--card-color) !important;
+  color: var(--text-color) !important;
+  /* Subtle border by default for dark mode; light mode overrides below */
+  border: 1px solid rgba(255,255,255,0.08);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 450ms cubic-bezier(0.2,0,0.1,1), box-shadow 450ms cubic-bezier(0.2,0,0.1,1), border-color 450ms;
+  height: 100%;
+}
+
+/* Increase selector specificity to override .card background if needed */
+.card.project-card {
+  background-color: var(--card-color) !important;
+} 
+
+.project-card .card-body {
+  background: transparent !important;
+}
+
+.card-front, .card-back {
+  background: transparent !important;
+}
+
+html[data-theme="light"] .project-card {
+  border-color: var(--secondary-color);
+}
+
+/* Dark mode tweak: slightly stronger subtle border for better separation */
+html:not([data-theme="light"]) .project-card {
+  border-color: rgba(255,255,255,0.08);
+}
+
+/* Dark mode image border tweak */
+html:not([data-theme="light"]) .project-img {
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.project-card:hover {
+  transform: translateY(-7px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--secondary-color);
+}
+
+html[data-theme="light"] .project-card:hover {
+  border-color: var(--accent-color);
+}
+
+.card-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, transparent 100%);
+  opacity: 0;
+  transition: var(--transition-base);
+}
+
+html[data-theme="light"] .card-glow {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, transparent 100%);
+}
+
+.project-card:hover .card-glow {
+  opacity: 1;
+}
+
+.project-card .card-body {
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.card-front {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.card-back {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.project-img {
+  width: 100%;
+  max-width: 280px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  /* Subtle image border in dark mode; light mode uses primary color override */
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+html[data-theme="light"] .project-img {
+  border-color: var(--primary-color);
+}
+
+.project-title {
+  color: var(--secondary-color);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.4;
+}
+
+html[data-theme="light"] .project-title {
+  color: var(--primary-color);
+}
+
+.project-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.project-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--gradient-primary);
+  color: white;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition-base);
+  font-size: 0.95rem;
+}
+
+.card-link:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-md);
+}
+
+.link-label {
+  font-size: 0.9rem;
+}
+
+/* Responsive rules moved from global.css */
+@media (max-width: 768px) {
+  .project-card {
+    min-height: 400px;
+  }
+
+  .project-card-wrapper {
+    max-width: 100%;
+  }
+}

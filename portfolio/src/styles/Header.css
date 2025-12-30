@@ -1,0 +1,152 @@
+/* Header / Navbar styles */
+.navbar {
+  background: var(--surface-color);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+  box-shadow: var(--shadow-md);
+  padding: 1rem 2rem !important;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: var(--transition-base);
+}
+
+html[data-theme="light"] .navbar {
+  border-bottom-color: rgba(37, 99, 235, 0.15);
+}
+
+.navbar-brand {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  transition: var(--transition-base);
+}
+
+.logo:hover {
+  transform: scale(1.1) rotate(-3deg);
+}
+
+.nav-link {
+  position: relative;
+  color: var(--text-secondary) !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 1.2rem !important;
+  transition: var(--transition-base);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+  transition: var(--transition-base);
+  transform: translateX(-50%);
+}
+
+.nav-link:hover {
+  color: var(--secondary-color) !important;
+}
+
+.nav-link:hover::after {
+  width: 70%;
+}
+
+.nav-link.active {
+  color: var(--secondary-color) !important;
+}
+
+.nav-link.active::after {
+  width: 70%;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  background: var(--gradient-primary);
+  border: none;
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-base);
+  box-shadow: var(--shadow-md);
+  font-size: 1.2rem;
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.1) rotate(20deg);
+  box-shadow: var(--shadow-lg);
+}
+
+.theme-icon {
+  animation: rotate 0.5s ease-in-out;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.toggle-icon {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+}
+
+.navbar-toggler {
+  border-color: var(--secondary-color) !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%2300d4ff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+html[data-theme="light"] .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%232563eb' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Logo Hover Animation */
+.logo-container svg {
+  transition: filter 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.logo-container svg:hover {
+  transform: scale(1.05);
+  /* Uses your Cyan variable for a tech-focused glow */
+  filter: drop-shadow(0 0 8px var(--secondary-color));
+}
+
+/* Light mode specific adjustment for the glow */
+html[data-theme="light"] .logo-container svg:hover {
+  filter: drop-shadow(0 0 5px rgba(44, 177, 255, 0.4));
+}
+
+@media screen and (max-width: 348px) {
+  .logo-svg {
+    display: none;
+  }
+}
