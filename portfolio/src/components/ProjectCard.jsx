@@ -40,7 +40,14 @@ export default function ProjectCard({ title, description, demo, github, video, i
             nodeRef={backRef}
           >
             <div ref={backRef} className="card-back w-100 text-center d-flex flex-column h-100">
-              <Card.Text className="project-desc mb-3 flex-grow-1">{description}</Card.Text>
+              <Card.Text className="project-desc mb-3 flex-grow-1">
+                    {description.split('\n').map((line, i) => (
+      <React.Fragment key={i}>
+        {line}
+        <br />
+      </React.Fragment>
+    ))}
+              </Card.Text>
               <div className="project-links">
                 {demo && (
                   <a href={demo} target="_blank" rel="noopener noreferrer" className="card-link" title="Live Demo">

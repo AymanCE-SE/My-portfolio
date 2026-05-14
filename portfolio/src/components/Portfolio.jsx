@@ -6,6 +6,7 @@ import crowdfundingImg from '../assets/crowdfunding.PNG'
 import portfolioImg from '../assets/my-portfolio.png'
 import jumoohImg from '../assets/jumooh.png'
 import tanfeezImg from '../assets/tanfeez.png'
+import PlabImg from '../assets/plab.png'
 import '../styles/Portfolio.css';
 import '../styles/Portfolio.css';
 
@@ -53,6 +54,13 @@ const projects = [
     demo: "https://tanfeez-freelance-platform.vercel.app/",
     image: tanfeezImg
   },
+  {
+    title: "Plab Blood Testing",
+    description: "-Django-based patient portal for lab report delivery, with a secure admin-managed workflow.\n-Custom phone-number login, patient dashboard, profile editing, password change, and PDF test-result downloads.\n-Supports English/Arabic with RTL layout and i18n, plus blog posts and lab announcements.\n-Uses dotenv-driven config, WhiteNoise static serving, optional Cloudinary media storage, and a custom lab_core app architecture.",
+    github: "https://github.com/AymanCE-SE/Plab",
+    demo: "https://plab.pythonanywhere.com/",
+    image: PlabImg
+  },
 ];
 
 export default function Portfolio() {
@@ -63,7 +71,7 @@ export default function Portfolio() {
         <h2 className="section-title">My Projects</h2>
         <div className="title-underline"></div>
         <p className="section-subtitle">
-         Explore my projects demonstrating expertise in React, Django, databases, and responsive design
+          Explore my projects showcasing full-stack and frontend work with polished, responsive experiences
         </p>
       </div>
       <div className="portfolio-grid">

@@ -17,7 +17,7 @@ export default function About() {
     },
     {
       category: "Backend",
-      skills: ["Python", "Django", "PostgreSQL", "MySQL", "REST API", "JWT"],
+      skills: ["Python", "Django", "PostgreSQL", "MySQL", "REST API"],
     },
     {
       category: "Tools & Others",
