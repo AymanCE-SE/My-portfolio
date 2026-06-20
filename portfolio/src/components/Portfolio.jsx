@@ -55,7 +55,7 @@ const projects = [
     image: tanfeezImg
   },
   {
-    title: "Plab Blood Testing",
+    title: "P-lab Patient Portal",
     description: "-Django-based patient portal for lab report delivery, with a secure admin-managed workflow.\n-Custom phone-number login, patient dashboard, profile editing, password change, and PDF test-result downloads.\n-Supports English/Arabic with RTL layout and i18n, plus blog posts and lab announcements.\n-Uses dotenv-driven config, WhiteNoise static serving, optional Cloudinary media storage, and a custom lab_core app architecture.",
     github: "https://github.com/AymanCE-SE/Plab",
     demo: "https://plab.pythonanywhere.com/",
