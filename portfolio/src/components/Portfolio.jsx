@@ -15,7 +15,7 @@ const projects = [
     title: "Jumooh Platform",
     description: "A bilingual, responsive full-stack platform for media projects with light/dark themes and interactive galleries. Features Lazy Loading for improved performance and a secure backend using Django and JWT.",
     github: "https://github.com/AymanCE-SE/pervasion",
-    demo: "https://jumoohmedia.com/",
+    demo: "https://pervasion.vercel.app/",
     image: jumoohImg
   },
   {
