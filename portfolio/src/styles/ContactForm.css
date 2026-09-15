@@ -72,7 +72,7 @@
   padding: 1.5rem;
   background: rgba(0, 212, 255, 0.05);
   border-radius: var(--radius-lg);
-  border-left: 4px solid var(--gradient-primary);
+  border-left: 4px solid var(--secondary-color);
   transition: var(--transition-base);
 }
 
@@ -170,9 +170,9 @@ html[data-theme="light"] .contact-form {
 }
 
 .form-input {
-  /* background: rgba(255, 255, 255, 0.05) ; */
+  background: rgba(255, 255, 255, 0.06) !important;
   border: 1px solid rgba(0, 212, 255, 0.2) !important;
-  color: #0f172a !important;
+  color: var(--text-color) !important;
   padding: 0.75rem 1.25rem !important;
   border-radius: var(--radius-lg) !important;
   transition: var(--transition-base) !important;
@@ -185,10 +185,10 @@ html[data-theme="light"] .form-input {
 }
 
 .form-input:focus {
-  /* background: rgba(255, 255, 255, 0.08) !important; */
+  background: rgba(255, 255, 255, 0.1) !important;
   border-color: var(--secondary-color) !important;
   box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1) !important;
-  color: #0f172a !important; ;
+  color: var(--text-color) !important;
 }
 
 html[data-theme="light"] .form-input:focus {

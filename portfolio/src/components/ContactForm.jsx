@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Form, Button, Alert, Container, Row, Col } from "react-bootstrap";
 import emailjs from '@emailjs/browser';
-import { FaEnvelope, FaLinkedin, FaGithub, FaTwitter, FaWhatsapp } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin, FaGithub, FaTwitter, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import '../styles/ContactForm.css';
 
 export default function ContactForm() {
@@ -60,7 +60,7 @@ export default function ContactForm() {
                 </div>
                 <div className="info-content">
                   <h4>Email</h4>
-                  <a href="mailto:contact@ayman.samir1095@gmail.com">send email</a>
+                  <a href="mailto:ayman.samir1095@gmail.com">ayman.samir1095@gmail.com</a>
                 </div>
               </div>
 
@@ -80,11 +80,11 @@ export default function ContactForm() {
                   <a href="https://github.com/AymanCE-SE" target="_blank" rel="noopener noreferrer" className="social-link" title="GitHub">
                     <FaGithub />
                   </a>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-link" title="LinkedIn">
+                  <a href="https://www.linkedin.com/in/ayman-samir2210/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn profile">
                     <FaLinkedin />
                   </a>
-                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-link" title="Twitter">
-                    <FaTwitter />
+                  <a href="https://www.instagram.com/ayman_samir22" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram profile">
+                    <FaInstagram />
                   </a>
                 </div>
               </div>

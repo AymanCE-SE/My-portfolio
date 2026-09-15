@@ -1,12 +1,14 @@
 /* ProjectCard component styles */
 .project-card-wrapper {
   width: 100%;
-  max-width: 380px;
+  max-width: 100%;
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
   position: relative;
-  min-height: 450px;
+  min-height: 500px;
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-md);
   /* Force correct card background to override Bootstrap defaults */
@@ -15,7 +17,6 @@
   /* Subtle border by default for dark mode; light mode overrides below */
   border: 1px solid rgba(255,255,255,0.08);
   overflow: hidden;
-  cursor: pointer;
   transition: transform 450ms cubic-bezier(0.2,0,0.1,1), box-shadow 450ms cubic-bezier(0.2,0,0.1,1), border-color 450ms;
   height: 100%;
 }
@@ -57,63 +58,38 @@ html[data-theme="light"] .project-card:hover {
   border-color: var(--accent-color);
 }
 
-.card-glow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, transparent 100%);
-  opacity: 0;
-  transition: var(--transition-base);
-}
-
-html[data-theme="light"] .card-glow {
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, transparent 100%);
-}
-
-.project-card:hover .card-glow {
-  opacity: 1;
-}
-
 .project-card .card-body {
-  height: 100%;
-  padding: 2rem;
+  flex: 1;
+  padding: 1.35rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
   position: relative;
   z-index: 2;
 }
 
-.card-front,
-.card-back {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 1.5rem;
-}
-
-.card-front {
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-.card-back {
-  animation: fadeIn 0.3s ease-in-out;
-}
-
 .project-img {
   width: 100%;
-  max-width: 280px;
-  height: 160px;
+  max-width: none;
+  height: 185px;
   object-fit: cover;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
+  border-radius: 0;
+  box-shadow: none;
   /* Subtle image border in dark mode; light mode uses primary color override */
   border: 1px solid rgba(255,255,255,0.06);
+}
+
+.project-card-body {
+  width: 100%;
+}
+
+.featured-label {
+  color: var(--secondary-color);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 html[data-theme="light"] .project-img {
@@ -122,9 +98,9 @@ html[data-theme="light"] .project-img {
 
 .project-title {
   color: var(--secondary-color);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  margin: 0;
+  margin: 0.55rem 0 0;
   line-height: 1.4;
 }
 
@@ -134,19 +110,66 @@ html[data-theme="light"] .project-title {
 
 .project-desc {
   color: var(--text-secondary);
+  display: -webkit-box;
   font-size: 0.95rem;
-  line-height: 1.6;
-  margin: 0;
+  line-height: 1.55;
+  margin: 0.7rem 0 1rem;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+}
+
+.project-technologies li {
+  background: rgba(44, 177, 255, 0.1);
+  border: 1px solid rgba(44, 177, 255, 0.25);
+  border-radius: 999px;
+  color: var(--secondary-color);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.25rem 0.55rem;
 }
 
 .project-links {
   display: flex;
-  gap: 1.5rem;
-  justify-content: center;
+  gap: 0.75rem;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
   margin-top: auto;
-  padding-top: 1rem;
+  padding-top: 0;
+}
+
+.project-details-btn {
+  align-items: center;
+  align-self: flex-start;
+  background: transparent;
+  border: 0;
+  color: var(--secondary-color);
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  gap: 0.45rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  transition: var(--transition-base);
+}
+
+.project-details-btn:hover,
+.project-details-btn:focus-visible {
+  color: var(--text-color);
+  gap: 0.7rem;
+  outline: none;
 }
 
 .card-link {
@@ -154,7 +177,7 @@ html[data-theme="light"] .project-title {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.6rem 1.2rem;
+  padding: 0.55rem 0.8rem;
   background: var(--gradient-primary);
   color: white;
   border-radius: var(--radius-lg);
@@ -162,24 +185,110 @@ html[data-theme="light"] .project-title {
   text-decoration: none;
   transition: var(--transition-base);
   font-size: 0.95rem;
+  white-space: nowrap;
 }
 
 .card-link:hover {
-  transform: scale(1.1);
+  color: white;
+  transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
 
-.link-label {
-  font-size: 0.9rem;
+.card-link-secondary {
+  background: transparent;
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.card-link-secondary:hover {
+  background: rgba(44, 177, 255, 0.12);
+  color: var(--secondary-color);
+}
+
+.project-modal {
+  background: var(--card-color);
+  border: 1px solid rgba(44, 177, 255, 0.25);
+  border-radius: var(--radius-xl);
+  color: var(--text-color);
+  overflow: hidden;
+}
+
+.project-modal .modal-header {
+  align-items: flex-start;
+  border-bottom-color: rgba(44, 177, 255, 0.15);
+  padding: 1.25rem 1.5rem;
+}
+
+.project-modal .modal-title {
+  color: var(--text-color);
+  font-size: 1.45rem;
+  margin-top: 0.35rem;
+}
+
+.project-modal .modal-body {
+  padding: 1.5rem;
+}
+
+html:not([data-theme="light"]) .project-modal .btn-close {
+  filter: invert(1) grayscale(1) brightness(2);
+}
+
+.project-carousel {
+  background: var(--background-color);
+  border-radius: var(--radius-lg);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.project-carousel img {
+  display: block;
+  height: min(48vw, 390px);
+  object-fit: contain;
+  width: 100%;
+}
+
+.project-modal-description {
+  color: var(--text-color);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.project-detail-list {
+  color: var(--text-secondary);
+  display: grid;
+  gap: 0.7rem;
+  line-height: 1.55;
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.project-detail-list li::marker {
+  color: var(--secondary-color);
+}
+
+.project-modal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card,
+  .card-link {
+    transition: none;
+  }
 }
 
 /* Responsive rules moved from global.css */
 @media (max-width: 768px) {
   .project-card {
-    min-height: 400px;
+    min-height: 460px;
   }
 
   .project-card-wrapper {
     max-width: 100%;
   }
+
 }

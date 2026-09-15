@@ -13,7 +13,14 @@ export default function About() {
   const technicalSkills = [
     {
       category: "Frontend",
-      skills: [ "HTML5", "CSS3","JavaScript", "Bootstrap", "React", "Redux Toolkit" ],
+      skills: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Bootstrap",
+        "React",
+        "Redux Toolkit",
+      ],
     },
     {
       category: "Backend",

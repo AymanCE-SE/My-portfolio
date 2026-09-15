@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { ReactTyped } from "react-typed";
 import { Row } from 'react-bootstrap';
 import { FaArrowDown } from 'react-icons/fa';
@@ -20,23 +19,16 @@ export default function Hero() {
             </h2>
           </div>
           
-          <h2 className="subtitle hero-subtitle">Full Stack Web Developer</h2>
+          <h2 className="subtitle hero-subtitle">Full-Stack Web Developer</h2>
           
           <p className="description hero-description">
-            I craft modern, responsive web experiences using the latest technologies.<br />
-            Passionate about UI/UX, performance, and clean code.
+            I build fast, accessible React and Django applications that turn ideas into useful digital products.
           </p>
           
           <div className="typed-container">
             <ReactTyped
               className='fs-2 hero-typed '
-              strings={[
-                "Web Design",
-                "Web Development",
-                "Frontend Development",
-                "Backend Development",
-                "Full Stack Solutions"
-              ]}
+              strings={["React interfaces", "Django APIs", "Responsive web apps"]}
               typeSpeed={50}
               backSpeed={60}
               loop

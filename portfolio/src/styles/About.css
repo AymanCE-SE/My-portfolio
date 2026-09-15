@@ -157,7 +157,7 @@ html[data-theme="light"] .skill-group:hover {
 
 .skill-icon {
   font-size: 1.8rem;
-  color: var(--gradient-primary);
+  color: var(--secondary-color);
   min-width: 40px;
 }
 
@@ -207,7 +207,7 @@ html[data-theme="light"] .skill-group:hover {
   padding: 2rem;
   background: rgba(0, 212, 255, 0.05);
   border-radius: var(--radius-lg);
-  border-left: 4px solid var(--gradient-primary);
+  border-left: 4px solid var(--secondary-color);
   transition: var(--transition-base);
 }
 
