@@ -3,7 +3,7 @@ import { Card, Carousel, Modal } from "react-bootstrap";
 import { FaArrowRight, FaGithub, FaExternalLinkAlt, FaVideo } from "react-icons/fa";
 import '../styles/ProjectCard.css';
 
-export default function ProjectCard({ title, description, details = [], technologies, demo, github, video, image, images, featured }) {
+export default function ProjectCard({ title, description, details = [], technologies, demo, github, video, image, images, featured, credentials }) {
   const [showDetails, setShowDetails] = useState(false);
   const projectImages = images?.length ? images : image ? [image] : [];
 
@@ -52,6 +52,21 @@ export default function ProjectCard({ title, description, details = [], technolo
               {details.map((detail) => <li key={detail}>{detail}</li>)}
             </ul>
           )}
+
+            {/* Test Accounts Section inside Modal */}
+            {credentials && credentials.length > 0 && (
+              <div className="project-credentials">
+                <h5>Test Accounts for Live Demo:</h5>
+                <ul>
+                  {credentials.map((cred, index) => (
+                    <li key={index}>
+                      <strong>{cred.role}:</strong> <span className="cred-email">{cred.email}</span> / <code>{cred.password}</code>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
           <div className="project-modal-links">
             {demo && <a href={demo} target="_blank" rel="noopener noreferrer" className="card-link"><FaExternalLinkAlt aria-hidden="true" /> Live site</a>}
             {github && <a href={github} target="_blank" rel="noopener noreferrer" className="card-link card-link-secondary"><FaGithub aria-hidden="true" /> Code</a>}

@@ -274,6 +274,45 @@ html:not([data-theme="light"]) .project-modal .btn-close {
   margin-top: 1.5rem;
 }
 
+/* Demo Credentials Box */
+.project-credentials {
+  margin: 1.25rem 0;
+  padding: 1rem 1.25rem;
+  background-color: var(--bs-light, #f8f9fa);
+  border: 1px solid var(--bs-border-color, #dee2e6);
+  border-radius: 0.5rem;
+}
+
+.project-credentials h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--bs-heading-color, #212529);
+}
+
+.project-credentials ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.project-credentials li {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--bs-body-color, #495057);
+}
+
+.project-credentials li:last-child {
+  margin-bottom: 0;
+}
+
+.project-credentials code {
+  background-color: rgba(0, 0, 0, 0.06);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--bs-code-color, #d63384);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .project-card,
   .card-link {
